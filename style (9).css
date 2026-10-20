@@ -1,0 +1,269 @@
+
+:root {
+    --azul-escuro: #102a43;
+    --azul: #176b87;
+    --azul-claro: #d9edf7;
+    --fundo: #f4f7fa;
+    --branco: #ffffff;
+    --texto: #334155;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+body {
+    background: var(--fundo);
+    color: var(--texto);
+    line-height: 1.6;
+}
+
+/* Cabeçalho */
+.cabecalho {
+    background: linear-gradient(135deg, var(--azul-escuro), var(--azul));
+    color: var(--branco);
+    text-align: center;
+    padding: 40px 20px;
+}
+
+.logo h1 {
+    font-size: 42px;
+    line-height: 1.2;
+}
+
+.logo span {
+    font-size: 15px;
+    opacity: 0.9;
+}
+
+.cabecalho > p {
+    margin-top: 15px;
+    font-size: 17px;
+}
+
+/* Seção principal */
+.elemento {
+    max-width: 1100px;
+    margin: 40px auto;
+    padding: 0 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 35px;
+}
+
+.elemento-card {
+    min-width: 190px;
+    padding: 22px;
+    background: var(--branco);
+    border: 2px solid var(--azul);
+    border-radius: 15px;
+    text-align: center;
+    box-shadow: 0 5px 18px rgba(16, 42, 67, 0.1);
+}
+
+.numero {
+    display: block;
+    text-align: left;
+    font-size: 16px;
+}
+
+.elemento-card h2 {
+    font-size: 65px;
+    color: var(--azul-escuro);
+    line-height: 1.2;
+}
+
+.elemento-card p {
+    font-size: 20px;
+    font-weight: bold;
+}
+
+.massa {
+    display: block;
+    margin-top: 10px;
+    font-size: 14px;
+}
+
+.elemento-info {
+    max-width: 650px;
+}
+
+.elemento-info h2,
+.informacoes > h2,
+.equipe > h2 {
+    color: var(--azul-escuro);
+    font-size: 28px;
+    margin-bottom: 15px;
+}
+
+/* Informações */
+.informacoes {
+    max-width: 1100px;
+    margin: 50px auto;
+    padding: 0 20px;
+}
+
+.informacoes > h2 {
+    text-align: center;
+    margin-bottom: 25px;
+}
+
+.cards {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 20px;
+}
+
+.card {
+    background: var(--branco);
+    padding: 25px;
+    border-radius: 12px;
+    box-shadow: 0 4px 14px rgba(16, 42, 67, 0.07);
+    border-top: 4px solid var(--azul);
+    transition: transform 0.3s ease;
+}
+
+.card:hover {
+    transform: translateY(-5px);
+}
+
+.card h3 {
+    color: var(--azul);
+    margin-bottom: 10px;
+    font-size: 19px;
+}
+
+/* Professores */
+.equipe {
+    padding: 50px 20px;
+    text-align: center;
+    background: var(--branco);
+}
+
+.equipe > h2 {
+    margin-bottom: 10px;
+}
+
+.equipe-descricao {
+    margin-bottom: 30px;
+}
+
+.equipe-container {
+    max-width: 700px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: center;
+    align-items: stretch;
+    flex-wrap: wrap;
+    gap: 30px;
+}
+
+.pessoa {
+    width: 240px;
+    padding: 25px 20px;
+    background: var(--fundo);
+    border-radius: 16px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.08);
+    transition: transform 0.3s ease;
+}
+
+.pessoa:hover {
+    transform: translateY(-5px);
+}
+
+.pessoa img {
+    width: 150px;
+    height: 150px;
+    object-fit: cover;
+    border-radius: 50%;
+    border: 4px solid var(--azul-claro);
+    display: block;
+    margin: 0 auto 15px;
+}
+
+.pessoa h3 {
+    color: var(--azul-escuro);
+    font-size: 19px;
+}
+
+/* Rodapé */
+footer {
+    background: var(--azul-escuro);
+    color: var(--branco);
+    text-align: center;
+    padding: 20px;
+    font-size: 14px;
+}
+
+/* Tablets */
+@media (max-width: 768px) {
+    .elemento {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .elemento-info {
+        max-width: 100%;
+    }
+
+    .cards {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+}
+
+/* Celulares */
+@media (max-width: 480px) {
+    .cabecalho {
+        padding: 30px 15px;
+    }
+
+    .logo h1 {
+        font-size: 34px;
+    }
+
+    .cabecalho > p {
+        font-size: 15px;
+    }
+
+    .elemento {
+        margin: 30px auto;
+        padding: 0 15px;
+    }
+
+    .elemento-card {
+        width: 100%;
+        max-width: 220px;
+    }
+
+    .elemento-info h2,
+    .informacoes > h2,
+    .equipe > h2 {
+        font-size: 24px;
+    }
+
+    .informacoes {
+        padding: 0 15px;
+        margin: 35px auto;
+    }
+
+    .cards {
+        grid-template-columns: 1fr;
+    }
+
+    .card {
+        padding: 20px;
+    }
+
+    .equipe-container {
+        gap: 20px;
+    }
+
+    .pessoa {
+        width: 100%;
+        max-width: 280px;
+    }
+}
